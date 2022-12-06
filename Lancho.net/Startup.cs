@@ -1,4 +1,6 @@
 ﻿using Lancho.net.Context;
+using Lancho.net.Repositories;
+using Lancho.net.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace Lancho.net;
@@ -16,6 +18,10 @@ public class Startup
     {
         services.AddDbContext<AppDbContext>(options =>
         options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+        services.AddTransient<ILancheRepository, LancheRepository>();
+        services.AddTransient<ICategoriaRepository, CategoriaRepository>();
+
         services.AddControllersWithViews();
     }
 
