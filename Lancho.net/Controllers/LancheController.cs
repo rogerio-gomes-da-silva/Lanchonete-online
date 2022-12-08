@@ -1,4 +1,5 @@
 ﻿using Lancho.net.Repositories.Interfaces;
+using Lancho.net.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Lancho.net.Controllers
@@ -14,8 +15,13 @@ namespace Lancho.net.Controllers
 
         public IActionResult List()
         {
-            var lanches = _lancheRepository.Lanches;
-            return View(lanches);
+            //var lanches = _lancheRepository.Lanches;
+            //return View(lanches);
+            var lancheListViewModel = new LancheListViewModel();
+            lancheListViewModel.Lanches = _lancheRepository.Lanches;
+            lancheListViewModel.CategoriaAtual = "Categoria Atual";
+
+            return View(lancheListViewModel);
         }
     }
 }
