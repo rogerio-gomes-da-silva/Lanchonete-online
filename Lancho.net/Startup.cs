@@ -1,4 +1,5 @@
 ﻿using Lancho.net.Context;
+using Lancho.net.Models;
 using Lancho.net.Repositories;
 using Lancho.net.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -22,6 +23,7 @@ public class Startup
         services.AddTransient<ILancheRepository, LancheRepository>();
         services.AddTransient<ICategoriaRepository, CategoriaRepository>();
         services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+        services.AddScoped(sp => CarrinhoCompra.GetCarrinho(sp));
 
         services.AddControllersWithViews();
         services.AddMemoryCache();

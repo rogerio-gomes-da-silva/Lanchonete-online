@@ -1,4 +1,6 @@
 ﻿using Lancho.net.Models;
+using Lancho.net.Repositories.Interfaces;
+using Lancho.net.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -6,6 +8,13 @@ namespace Lancho.net.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly ILancheRepository _lancheRepository;
+
+        public HomeController(ILancheRepository lancheRepository)
+        {
+            _lancheRepository = lancheRepository;
+        }
+
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -15,7 +24,11 @@ namespace Lancho.net.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var homeViewModel = new HomeViewModel
+            {
+                LanchesPreferidos = _lancheRepository.LanchesPreferidos
+            };
+            return View(homeViewModel);
         }
 
         public IActionResult Privacy()
