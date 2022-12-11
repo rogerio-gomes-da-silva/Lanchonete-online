@@ -1,12 +1,13 @@
 ﻿@model CarrinhoCompraViewModel
 
 <div class="container">
-<div class="row">
-    <img src="~/img/Carrinho-de-Compras.png"
+<div class="row checkoutForm">
     <div>
-        <h4>Seu carrinho de compras : </h4>
+        <img src="~/img/Carrinho-de-Compras.png" width="30" height="35" /><h4>Seu carrinho de compras : </h4>
     </div>
+
     <table class="table table-bordered table-striped">
+
         <thead>
             <tr>
                 <th>Quantidade</th>
@@ -16,8 +17,10 @@
                 <th></th>
             </tr>
         </thead>
+
         <tbody>
-            @foreach(var item in Model.CarrinhoCompra.CarrinhoCompraItems){
+            @foreach(var item in Model.CarrinhoCompra.CarrinhoCompraItems)
+            {
                 <tr>
                     <td class="text-center">@item.Quantidade</td>
                     <td class="text-left">@item.Lanche.Nome</td>
@@ -25,9 +28,10 @@
                     <td class="text-right">
                         @((item.Quantidade * item.Lanche.Preco).ToString("c"))
                     </td>
+
                     <td class="text-center">
                         <a asp-controller="CarrinhoCompra" asp-action="RemoverItemDoCarrinhoCompra"
-                        asp-rout-lancheId="@item.Lanche.LancheId"><img src="~/img/lixeira.png"/>
+                        asp-route-lancheId="@item.Lanche.LancheId"><img src="~/img/lixeira.png" width="10px" height="10px" />
                         </a>
                     </td>
                 </tr>

@@ -103,5 +103,6 @@ namespace Lancho.net.Models
                 .Select(c => c.Lanche.Preco * c.Quantidade).Sum();
             return total;
         }
+
     }
 }

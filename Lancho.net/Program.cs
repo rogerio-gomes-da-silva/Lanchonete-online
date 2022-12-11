@@ -1,5 +1,3 @@
-using Microsoft.AspNetCore.Hosting;
-
 namespace Lancho.net;
 public class Program
 {
