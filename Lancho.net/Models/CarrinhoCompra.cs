@@ -14,6 +14,8 @@ namespace Lancho.net.Models
 
         public string CarrinhoCompraId { get; set; }
         public List<CarrinhoCompraItem> CarrinhoCompraItems { get; set; }
+        public object CarrinhoCompraitems { get; internal set; }
+
         public static CarrinhoCompra GetCarrinho(IServiceProvider services)
         {
             //define uma sessão

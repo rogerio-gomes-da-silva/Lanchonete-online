@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "v7TbH9J6KZPIkGdpd1LfF0yVh5wzy6qhR96g1WVDOPg=",
+  "Hash": "SO67teDv4BlkrdKz88KpEifM/VxNbm5Qo6Qeq/vI0BQ=",
   "Source": "Lancho.net",
   "BasePath": "_content/Lancho.net",
   "Mode": "Default",
@@ -221,12 +221,12 @@
       "OriginalItemSpec": "wwwroot\\img\\Home-iconred.png"
     },
     {
-      "Identity": "D:\\Projetos\\Lancho.net\\Lancho.net\\Lancho.net\\wwwroot\\img\\lixeira.png",
+      "Identity": "D:\\Projetos\\Lancho.net\\Lancho.net\\Lancho.net\\wwwroot\\img\\Lixeira-icon.png",
       "SourceId": "Lancho.net",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Projetos\\Lancho.net\\Lancho.net\\Lancho.net\\wwwroot\\",
       "BasePath": "_content/Lancho.net",
-      "RelativePath": "img/lixeira.png",
+      "RelativePath": "img/Lixeira-icon.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -235,7 +235,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\lixeira.png"
+      "OriginalItemSpec": "wwwroot\\img\\Lixeira-icon.png"
     },
     {
       "Identity": "D:\\Projetos\\Lancho.net\\Lancho.net\\Lancho.net\\wwwroot\\img\\phone-app-icon.png",
